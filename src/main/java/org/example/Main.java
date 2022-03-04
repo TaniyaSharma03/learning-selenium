@@ -14,16 +14,15 @@ public class Main {
 
        WebDriver driver = chromeDriver();
        // WebDriver driver = firefoxDriver();
-//testGoogle(driver);
-testSelenium(driver);
+       //testGoogle(driver);
+       //testfirefoxDriver(driver);
+       testSelenium(driver);
     }
 
     public static void testGoogle(WebDriver driver){
         driver.get("http://google.com");
-        // document.getElementsByName("q")[0]
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.click();
-        // document.getElementsByName("q")[0].value = "Selenium Testing"
         searchBox.sendKeys("Selenium Testing");
         searchBox.sendKeys(Keys.ENTER);
     }
@@ -32,10 +31,9 @@ testSelenium(driver);
         WebElement blog =driver.findElement(By.linkText("Blog"));
         blog.click();
        // WebElement searchBox = driver.findElement(By.cssSelector("#main_navbar > ul > li:nth-child(7) > a > span"));
-       // searchBox.click();
-       WebElement link2016 = driver.findElement(By.id("m-blog2016-li"));
+        WebElement link2016 = driver.findElement(By.id("m-blog2016-li"));
         link2016.click();
-WebElement element= driver.findElement(By.linkText("Fall Selenium Conf, Save the Date & Call for Speakers!"));
+        WebElement element= driver.findElement(By.linkText("Fall Selenium Conf, Save the Date & Call for Speakers!"));
         element.click();
     }
     public static WebDriver firefoxDriver() {
