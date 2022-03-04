@@ -8,8 +8,14 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static org.example.Main.chromeDriver;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class CheckBoxTest {
@@ -37,5 +43,13 @@ public class CheckBoxTest {
    lettuce.click();
     assertTrue(lettuce.isSelected());
 }
+@Test
+    public void test_loading_message(){
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.id("message")));
+        WebElement msg=driver.findElement(By.id("message"));
+        msg.click();
+        assertEquals("Loading complete...",msg.getText());
 
+    }
 }
