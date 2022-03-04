@@ -1,0 +1,98 @@
+{
+  "id": "b53c1462-d888-490b-b15e-502aa95305af",
+  "version": "2.0",
+  "name": "google-test",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "6b5c460c-1919-483b-a513-0df81eff3df7",
+    "name": "test one",
+    "commands": [{
+      "id": "bfe10820-fe7a-4f8e-90ba-526c5c9e46e0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41c9295f-80f4-407f-8d07-b5aada091a00",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1298x741",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27c4d96b-c127-4471-a9c8-02f32d08a0b7",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Selenium testing"
+    }, {
+      "id": "ac690edc-ad79-4939-85c8-0719909e0597",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a031c8e6-9ebc-4775-b007-27335d72a07f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Stable release",
+      "targets": [
+        ["linkText=Stable release", "linkText"],
+        ["css=.wDYxhc:nth-child(2) .fl", "css:finder"],
+        ["xpath=//a[contains(text(),'Stable release')]", "xpath:link"],
+        ["xpath=//div[@id='kp-wp-tab-overview']/div/div/div/div/div/div/div[2]/div/div/div/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search?q=selenium+software+stable+release&sa=X&ved=2ahUKEwj6wcyB4ab2AhXySmwGHbMLCMoQ6BMoAHoECBIQAg')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Stable release')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a878581b-20d9-4ead-99c0-93583530803f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fnYJle",
+      "targets": [
+        ["css=.fnYJle", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div/div/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'People also ask')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59ce5d48-cdbe-4b8b-9fb4-f6487d2ff130",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .tF2Cxc > .yuRUbf .LC20lb",
+      "targets": [
+        ["css=div:nth-child(2) > .tF2Cxc > .yuRUbf .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'What is Selenium? Introduction to Selenium Automation Testing')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "df7320af-06b9-42c9-bc4f-7c9a434eeda4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6b5c460c-1919-483b-a513-0df81eff3df7"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
