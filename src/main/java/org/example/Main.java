@@ -29,12 +29,14 @@ testSelenium(driver);
     }
     public static void testSelenium (WebDriver driver){
         driver.get("https://www.selenium.dev/");
-        WebElement searchBox = driver.findElement(By.cssSelector("#main_navbar > ul > li:nth-child(7) > a > span"));
-        searchBox.click();
-        searchBox= driver.findElement(By.id("m-blog2016-li"));
-        searchBox.click();
-searchBox= driver.findElement(By.cssSelector("body > div > div.td-main > div > main > div:nth-child(1) > div > ul > li:nth-child(4) > div > h5 > a"));
-        searchBox.click();
+        WebElement blog =driver.findElement(By.linkText("Blog"));
+        blog.click();
+       // WebElement searchBox = driver.findElement(By.cssSelector("#main_navbar > ul > li:nth-child(7) > a > span"));
+       // searchBox.click();
+       WebElement link2016 = driver.findElement(By.id("m-blog2016-li"));
+        link2016.click();
+WebElement element= driver.findElement(By.linkText("Fall Selenium Conf, Save the Date & Call for Speakers!"));
+        element.click();
     }
     public static WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
